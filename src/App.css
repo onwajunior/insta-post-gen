@@ -1,0 +1,126 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+/* Header */
+.app__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app__back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  min-height: 44px;
+}
+
+.app__back-button:hover {
+  background-color: var(--border);
+}
+
+.app__back-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.app__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Main content */
+.app__content {
+  padding: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.app__canvas-section {
+  margin-bottom: 2rem;
+}
+
+.app__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Tablet layout */
+@media (min-width: 768px) {
+  .app__content {
+    max-width: 600px;
+    padding: 2rem;
+  }
+  
+  .app__header {
+    padding: 1rem 2rem;
+  }
+  
+  .app__title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop layout - two panel */
+@media (min-width: 1024px) {
+  .app__content {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .app__canvas-section {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+  }
+  
+  .app__controls {
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 120px;
+  }
+}
+
+/* Loading states and animations */
+.app__content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
