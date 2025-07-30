@@ -12,9 +12,9 @@ export const templates = [
       padding: 140
     },
     preview: {
-      background: '#ffffff',
+      background: '#000000',
       text: 'Beautiful\nQuote Here',
-      textColor: '#000000'
+      textColor: '#ffffff'
     }
   },
   {
@@ -31,9 +31,9 @@ export const templates = [
       accentPosition: { x: 540, y: 300 }
     },
     preview: {
-      background: '#f8fafc',
+      background: '#1a1a1a',
       text: 'Business\nAnnouncement',
-      textColor: '#1e293b'
+      textColor: '#ffffff'
     }
   },
   {
@@ -50,9 +50,9 @@ export const templates = [
       subtextPosition: { x: 540, y: 400 }
     },
     preview: {
-      background: '#fef3c7',
+      background: '#667eea',
       text: 'New Product\nLaunch',
-      textColor: '#92400e'
+      textColor: '#ffffff'
     }
   },
   {
@@ -68,7 +68,7 @@ export const templates = [
       bold: true
     },
     preview: {
-      background: '#1e293b',
+      background: '#764ba2',
       text: 'ACHIEVE\nGREATNESS',
       textColor: '#ffffff'
     }
@@ -88,32 +88,32 @@ export const templates = [
     preview: {
       background: '#ffffff',
       text: 'Simple\nMessage',
-      textColor: '#374151'
+      textColor: '#000000'
     }
   }
 ];
 
-// Background color options
+// Modern gradient background colors inspired by the mood app
 export const backgroundColors = [
   { id: 'white', name: 'White', color: '#ffffff' },
   { id: 'black', name: 'Black', color: '#000000' },
-  { id: 'gray-light', name: 'Light Gray', color: '#f9fafb' },
-  { id: 'gray', name: 'Gray', color: '#6b7280' },
-  { id: 'blue-light', name: 'Light Blue', color: '#dbeafe' },
-  { id: 'blue', name: 'Blue', color: '#3b82f6' },
-  { id: 'green-light', name: 'Light Green', color: '#d1fae5' },
-  { id: 'green', name: 'Green', color: '#10b981' },
-  { id: 'yellow-light', name: 'Light Yellow', color: '#fef3c7' },
-  { id: 'yellow', name: 'Yellow', color: '#f59e0b' },
-  { id: 'red-light', name: 'Light Red', color: '#fee2e2' },
-  { id: 'red', name: 'Red', color: '#ef4444' },
-  { id: 'purple-light', name: 'Light Purple', color: '#e9d5ff' },
-  { id: 'purple', name: 'Purple', color: '#8b5cf6' },
-  { id: 'pink-light', name: 'Light Pink', color: '#fce7f3' },
-  { id: 'pink', name: 'Pink', color: '#ec4899' }
+  { id: 'warm-gradient', name: 'Warm', color: '#ff9a8b' },
+  { id: 'sunset', name: 'Sunset', color: '#ff6b6b' },
+  { id: 'ocean', name: 'Ocean', color: '#4ecdc4' },
+  { id: 'forest', name: 'Forest', color: '#45b7d1' },
+  { id: 'lavender', name: 'Lavender', color: '#96ceb4' },
+  { id: 'coral', name: 'Coral', color: '#ffeaa7' },
+  { id: 'purple', name: 'Purple', color: '#6c5ce7' },
+  { id: 'mint', name: 'Mint', color: '#55efc4' },
+  { id: 'peach', name: 'Peach', color: '#fd79a8' },
+  { id: 'sky', name: 'Sky', color: '#74b9ff' },
+  { id: 'rose', name: 'Rose', color: '#e84393' },
+  { id: 'amber', name: 'Amber', color: '#fdcb6e' },
+  { id: 'emerald', name: 'Emerald', color: '#00b894' },
+  { id: 'violet', name: 'Violet', color: '#a29bfe' }
 ];
 
-// Color palettes for text (keeping existing)
+// Modern color palettes with sophisticated combinations
 export const colorPalettes = [
   {
     id: 'classic',
@@ -123,39 +123,39 @@ export const colorPalettes = [
     accent: '#333333'
   },
   {
-    id: 'warm',
-    name: 'Warm',
-    background: '#fef7f0',
-    text: '#8b4513',
-    accent: '#cd853f'
+    id: 'midnight',
+    name: 'Midnight',
+    background: '#000000',
+    text: '#ffffff',
+    accent: '#667eea'
   },
   {
-    id: 'cool',
-    name: 'Cool',
-    background: '#f0f8ff',
-    text: '#1e3a8a',
-    accent: '#3b82f6'
+    id: 'sunset',
+    name: 'Sunset',
+    background: '#ff6b6b',
+    text: '#ffffff',
+    accent: '#ff9a8b'
+  },
+  {
+    id: 'ocean',
+    name: 'Ocean',
+    background: '#4ecdc4',
+    text: '#ffffff',
+    accent: '#45b7d1'
+  },
+  {
+    id: 'royal',
+    name: 'Royal',
+    background: '#6c5ce7',
+    text: '#ffffff',
+    accent: '#a29bfe'
   },
   {
     id: 'nature',
     name: 'Nature',
-    background: '#f0f9ff',
-    text: '#166534',
-    accent: '#10b981'
-  },
-  {
-    id: 'bold',
-    name: 'Bold',
-    background: '#fef3c7',
-    text: '#dc2626',
-    accent: '#f59e0b'
-  },
-  {
-    id: 'mono',
-    name: 'Monochrome',
-    background: '#f9fafb',
-    text: '#374151',
-    accent: '#6b7280'
+    background: '#00b894',
+    text: '#ffffff',
+    accent: '#55efc4'
   }
 ];
 

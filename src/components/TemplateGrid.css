@@ -2,119 +2,173 @@
   padding: 2rem 1rem;
   max-width: 400px;
   margin: 0 auto;
+  background: var(--background);
 }
 
 .template-grid__title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   color: var(--text-primary);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .template-grid__subtitle {
   text-align: center;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .template-grid__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .template-grid__container .template-card:last-child {
   grid-column: 1 / -1;
   justify-self: center;
+  max-width: 180px;
 }
 
 .template-card {
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 0.75rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1.5rem;
   overflow: hidden;
-  background: white;
+  background: var(--background-card);
   border: 2px solid var(--border);
+  backdrop-filter: blur(20px);
+  position: relative;
 }
 
 .template-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
 }
 
 .template-card:active {
-  transform: scale(0.98);
+  transform: translateY(-4px) scale(0.98);
 }
 
 .template-card__preview {
   width: 100%;
-  height: 88px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.template-card__preview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
 }
 
 .template-card__text {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.3;
   white-space: pre-line;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  position: relative;
 }
 
 .template-card__info {
-  padding: 0.75rem;
+  padding: 1.25rem;
   text-align: center;
+  background: var(--background-card);
 }
 
 .template-card__name {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
 
 .template-card__description {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .template-grid__cta {
   text-align: center;
   color: var(--text-secondary);
   font-size: 0.875rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+/* Specific gradient backgrounds for each template */
+.template-card:nth-child(1) .template-card__preview {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.template-card:nth-child(2) .template-card__preview {
+  background: linear-gradient(135deg, #ff9a8b 0%, #fecda3 100%);
+}
+
+.template-card:nth-child(3) .template-card__preview {
+  background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
+}
+
+.template-card:nth-child(4) .template-card__preview {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.template-card:nth-child(5) .template-card__preview {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
 }
 
 /* Tablet and desktop adjustments */
 @media (min-width: 768px) {
   .template-grid {
     max-width: 600px;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
+  }
+  
+  .template-grid__title {
+    font-size: 2.5rem;
   }
   
   .template-grid__container {
-    gap: 1.5rem;
+    gap: 2rem;
   }
   
   .template-card__preview {
-    height: 120px;
+    height: 140px;
   }
   
   .template-card__text {
-    font-size: 0.875rem;
-  }
-  
-  .template-card__name {
     font-size: 1rem;
   }
   
+  .template-card__name {
+    font-size: 1.125rem;
+  }
+  
   .template-card__description {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 } 
