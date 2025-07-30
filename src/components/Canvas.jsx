@@ -46,13 +46,9 @@ const Canvas = ({
     const fontWeight = template.layout.bold ? '700' : '600';
     ctx.font = `${fontWeight} ${fontSize}px ${font.family}`;
     
-    // Use color palette text color, but ensure readability with background
-    let textColor = colorPalette.text;
-    
-    // If we have a custom background, use contrasting text color for better readability
-    if (backgroundColor) {
-      textColor = getContrastingTextColor(backgroundColor.color);
-    }
+    // Always use the selected color palette text color
+    // This respects the user's text color choice
+    const textColor = colorPalette.text;
     
     ctx.fillStyle = textColor;
     ctx.textAlign = template.layout.textAlign;
